@@ -13,17 +13,16 @@ app.use(cors());
 //DB Config
 const db = config.get("mongoURI");
 
-//Connect to MongoDB
+//Connect to MongoDB with model drive called mongoose
 mongoose.connect(db,{useNewUrlParser: true, useCreateIndex: true})
 .then(() => console.log('MongoDB Connected..'))
 .catch(err => console.log(err));
 
+//API'S
 const products = require('./routes/api/products')
-const cart = require('./routes/api/cart')
 
 //USE ROUTES
 app.use('/products', products)
-app.use('/cartProducts', cart)
 
 //TO DEPLOY
 const port = process.env.PORT || 5000
