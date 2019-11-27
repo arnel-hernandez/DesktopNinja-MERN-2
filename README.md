@@ -6,13 +6,11 @@ cd server
 npm install
 npm start
 
+If not downloaded.
 Download Part 2
 Client side
 
 https://github.com/arnel-hernandez/DesktopNinja-MERN-1
 
-Paste to Client folder.
-
-cd client
-npm install
+if not installed npm install
 npm start
